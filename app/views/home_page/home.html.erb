@@ -1,0 +1,64 @@
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="navbar-brand" href="#Home">好的!</a> -->
+		  <%= link_to "好的！", "#Home", class: "navbar-brand" %>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="#web_list" class="glyphicon glyphicon-list"></a></li> -->
+			<li><%= link_to "", "#Web_list", class: "glyphicon glyphicon-list" %></li>
+            <!-- <li><a href="demo_user.html" class="glyphicon glyphicon-user"></a></li> -->
+			<li><%= link_to "", "demo_user.html", class: "glyphicon glyphicon-user" %></li>
+          </ul>
+		<form action="##" class="navbar-form navbar-right" rol="search">
+		<div class="form-group has-feedback has-feedback-left">
+			<label for="search_web"></label>
+			<input type="text" id="search_web" class="form-control"/>
+			<span class="glyphicon glyphicon-search form-control-feedback"></span>
+		</div>
+		</form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+	
+	<div id="web_img" class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<!-- <a id="web_link" href="imooc.com"><img src=imooc/imooc.jpg></a> -->
+				<%= link_to image_tag("imooc/imooc.jpg"), "http://imooc.com" %>
+			</div>
+			<div class="col-md-4">
+				<div id="intro" class="jumbotron">
+					<p><em>点击进入条目</em><a id="item_button" href="demo_2Col_item.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 慕课网</a></p>
+					<br>
+					<p>专注做好IT技能教育的MOOC，符合互联网发展潮流接地气儿的MOOC。我们免费，我们只教有用的，我们专心做教育。</p><br>
+					<p>MOOC：源于国外，Massive（大规模）Open（开放）Online（在线）Course（课程）。</p>
+				</div> 
+				<div id="page_buttons">
+					<a href="#" id="last_button" class="btn btn-default">上</a><br><br>
+					<a href="demo_2Col_yeeyan.html" id="next_button" class="btn btn-default">下</a>
+				<br>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+	
+	<!--SVG-->
+
+	
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

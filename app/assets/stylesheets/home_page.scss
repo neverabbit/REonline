@@ -1,3 +1,151 @@
 // Place all the styles related to the HomePage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	font-family: "Lantinghei SC", "STHeiti Light", MingLiu, "Microsoft Yahei", sans-serif;
+	background-color: white;
+	/*lightblue;*/
+	color: #426980;
+	/*35576b;good*/
+	/*215674;good;*/
+	/*5d5b94;*/
+	/*52678f;*/
+	/*#425474;*/
+	/*color: dimgray;*/
+	/*color: gray;*/
+	/*color: rosybrown;*/
+}
+
+
+
+#web_img {
+	margin-top: 40px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+#intro, #page_buttons, #next_web, #users {
+	padding: 1em 2em 0.8em;
+	margin-top: 2em;
+}
+
+.jumbotron {
+	background-color: #f0ede9;
+}
+
+#item_button {
+	font-size: 34px;
+	color: black;
+}
+
+.glyphicon {
+	font-size: 14px;
+	color: #426980;
+}
+
+#intro p, #next_web p {	
+	text-align: right;
+	font-size: 1em;	
+}
+
+#last_button, #next_button {
+	float: right;
+	font-size: 1em;
+	color: #426980;
+	border-color: white;
+	background-color: #f0ede9;
+}
+
+#web_name {
+	padding-top: 3em;
+}
+
+.properties {
+	margin-right: 2em;
+}
+
+/* adjust navbar */
+.navbar {
+	min-height: 40px;
+}
+.navbar-brand {
+	height: 40px;
+	font-size: 14px;
+	padding: 10px;
+}
+.navbar li a {
+	padding: 10px;
+}
+.form-control {
+	height: 26px;
+}
+.form-control-feedback {
+	height: 26px;
+	line-height: 26px;
+}
+.navbar-toggle {
+	margin: 3px 0 4px;
+}
+
+
+/*item_column*/
+#inform, #subs, #selected {
+	padding: 1em 0 1em 1em;
+	margin-top: 2em;
+	display: block;
+	overflow: hidden;
+}
+
+#inform img {
+	float: left;
+	display: inline;
+	margin-right: 1em;
+}
+
+#inform p {
+	display: inline;
+	font-size: 1.2em;
+}
+
+
+#inform p span {
+	font-size: 0.8em;
+	padding: 0em 0.5em;
+	margin: 0.6em 0.5em 0em 0;
+	background-color: lightgray;
+	font-style: italic;
+}
+
+
+.icon {
+	font-size: 1.2em;
+	margin-top: 0.2em;
+}
+
+
+#grades, #comments {
+	padding-left: 1em;
+}
+
+#grades p {
+	/*float: left;*/
+	display: inline;
+	margin-right: 1.5em;
+}
+/*#selected {
+	padding-left: 0;
+	padding-right: 0;
+}*/
+
+/*aside column
+#relevance {
+	background-color: lightblue;
+}
+*/
