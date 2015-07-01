@@ -22,7 +22,7 @@ body {
 
 
 
-#web_img {
+#main {
 	margin-top: 40px;
 }
 
@@ -63,9 +63,9 @@ img {
 	background-color: #f0ede9;
 }
 
-#web_name {
-	padding-top: 3em;
-}
+//#web_name {
+//	padding-top: 3em;
+//}
 
 .properties {
 	margin-right: 2em;
@@ -83,12 +83,12 @@ img {
 .navbar li a {
 	padding: 10px;
 }
-.form-control {
-	height: 26px;
+#search_web {
+	height: 24px !important; 
 }
 .form-control-feedback {
-	height: 26px;
-	line-height: 26px;
+	height: 24px !important;
+	line-height: 24px !important;
 }
 .navbar-toggle {
 	margin: 3px 0 4px;

@@ -1,0 +1,9 @@
+<%= form_for(@web, html: { multipart: true}) do |f| %>
+	<div class="field">
+		<%= f.text_area :content, placeholder: "Name" %>
+	</div>
+	<%= f.submit "Upload", class: "btn btn-primary" %>
+	<span class="image_big">
+		<%= f.file_field :image_big %>
+	</span>
+<% end %>
