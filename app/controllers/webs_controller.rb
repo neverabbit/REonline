@@ -17,9 +17,13 @@ class WebsController < ApplicationController
     end
   end
   
+  def index
+    @webs = Web.order('id').reverse_order.paginate(page: params[:page], per_page: 1)
+  end
+  
   private
   
     def web_params
-      params.require(:web).permit(:name, :address, :description)
+      params.require(:web).permit(:name, :address, :image_big, :description)
     end
 end

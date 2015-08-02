@@ -11,26 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150628114815) do
+ActiveRecord::Schema.define(version: 20150730073320) do
 
-  create_table "expressions", force: :cascade do |t|
+  create_table "collection_webs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "plates", force: :cascade do |t|
     t.string   "name",        limit: 255
+    t.string   "address",     limit: 255
     t.string   "description", limit: 255
-    t.string   "detail",      limit: 255
-    t.string   "suffix",      limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "web_id",      limit: 4
   end
+
+  add_index "plates", ["web_id"], name: "index_plates_on_web_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name",             limit: 255
+    t.string   "email",            limit: 255
+    t.boolean  "isadmin",          limit: 1
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "password_digest",  limit: 255
+    t.string   "remember_digest",  limit: 255
+    t.text     "user_description", limit: 65535
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
   create_table "webs", force: :cascade do |t|
     t.string   "name",             limit: 255
     t.string   "address",          limit: 255
     t.string   "image_big_path",   limit: 255
     t.string   "image_small_path", limit: 255
-    t.string   "description",      limit: 255
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.text     "description",      limit: 65535
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "image_big",        limit: 255
   end
 
+  add_foreign_key "plates", "webs"
 end

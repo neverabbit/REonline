@@ -8,6 +8,12 @@
 	box-sizing: border-box;
 }
 
+@mixin partial_form_box {
+	margin: 6px 12px 6px 0 !important;
+	padding: 0;
+	font-size: 12px;
+}
+
 //body {
 //	padding-top: 60px;
 //}
@@ -27,12 +33,44 @@ input {
 	height: auto !important;
 }
 
-#new_web>label {
+.submit_button {
+	margin: 20px 0 !important;
+}
+
+.new_form>label {
 	margin-top: 20px;
 	font-weight: normal;
 }
 
 #web_description {
 	height: 80px;
-	margin-bottom: 20px;
 }
+
+.pagination {
+	float: right;
+	position: relative;
+	bottom: 40px;
+}
+
+#new_name, #new_description {
+	display: none;
+}
+
+#new_name_link, #new_description_link {
+	@include partial_form_box;
+}
+
+.inline_input {
+	width: auto;
+	display: inline;
+	@include partial_form_box
+}
+
+#show_name {
+	font-size: 20px;
+}
+
+#show_description, #user_user_description {
+	display: block !important;
+}
+

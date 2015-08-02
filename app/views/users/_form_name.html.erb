@@ -1,0 +1,11 @@
+	<!-- <strong>qqq</strong> -->
+	<%= form_for @user, html: { method: "patch", class: "new_form", id: "new_name" }, remote: true do |f| %>
+		<!-- <% @item = @user %>
+		<%= render 'shared/error_messages' %> -->
+	
+		<%= f.label :name, "昵称", class: "inline_input" %>
+		<%= f.text_field :name, class: "inline_input" %>
+	
+		<%= button_tag "确定", class: "inline_input" %>
+		<%= button_tag "取消", type: "button", class: 'inline_input', id: 'name_cancel_button' %>
+	<% end %>

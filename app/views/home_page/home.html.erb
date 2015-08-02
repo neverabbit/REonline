@@ -2,19 +2,23 @@
 <div class="row">
 	<div class="col-md-8">
 		<!-- <a id="web_link" href="imooc.com"><img src=imooc/imooc.jpg></a> -->
-		<%= link_to image_tag("imooc/imooc.jpg"), @web.address %>
+		<%= link_to image_tag(@web.image_big), @web.address %>
 	</div>
 	<div class="col-md-4">
 		<div id="intro" class="jumbotron">
-			<p><em>点击进入条目</em><a id="item_button" href="demo_2Col_item.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 慕课网</a></p>
+			<p><em>点击进入条目</em><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> <%= link_to @web.name, @web, id: "item_button" %></p>
 			<br>
-			<p>专注做好IT技能教育的MOOC，符合互联网发展潮流接地气儿的MOOC。我们免费，我们只教有用的，我们专心做教育。</p><br>
-			<p>MOOC：源于国外，Massive（大规模）Open（开放）Online（在线）Course（课程）。</p>
+			<p> <%= simple_format @web.description %></p>
+			<!-- <p>专注做好IT技能教育的MOOC，符合互联网发展潮流接地气儿的MOOC。我们免费，我们只教有用的，我们专心做教育。</p><br>
+			<p>MOOC：源于国外，Massive（大规模）Open（开放）Online（在线）Course（课程）。</p> -->
 		</div> 
 		<div id="page_buttons">
-			<a href="#" id="last_button" class="btn btn-default">上</a><br><br>
+			<%= link_to "上", root_path, id: "last_button", class: "btn btn-default" %>
+			<br><br>
+			<!-- <a href="#" id="last_button" class="btn btn-default">上</a><br><br> -->
 			<a href="demo_2Col_yeeyan.html" id="next_button" class="btn btn-default">下</a>
 		<br>
+		<!-- <%= hidden_field_tag :id, @web.id %> -->
 		</div>
 	</div>
 </div>

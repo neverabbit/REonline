@@ -1,0 +1,22 @@
+
+
+<% @webs.each do |web| %>
+<div class="row">
+	<div class="col-md-8">
+		<!-- <a id="web_link" href="imooc.com"><img src=imooc/imooc.jpg></a> -->
+		<%= link_to image_tag(web.image_big), full_URL(web.address) %>
+	</div>
+	<div class="col-md-4">
+		<div id="intro" class="jumbotron">
+			<p><em>点击进入条目</em><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> <%= link_to web.name, web, id: "item_button" %></p>
+			<br>
+			<p> <%= simple_format web.description %></p>
+			<!-- <p>专注做好IT技能教育的MOOC，符合互联网发展潮流接地气儿的MOOC。我们免费，我们只教有用的，我们专心做教育。</p><br>
+			<p>MOOC：源于国外，Massive（大规模）Open（开放）Online（在线）Course（课程）。</p> -->
+		</div> 
+
+	</div>
+</div>
+<% end %>
+
+<%= will_paginate @webs, page_links: false %>

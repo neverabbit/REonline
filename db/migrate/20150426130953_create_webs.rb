@@ -5,7 +5,7 @@ class CreateWebs < ActiveRecord::Migration
       t.string :address
       t.string :image_big_path
       t.string :image_small_path
-      t.string :description
+      t.text :description
 
       t.timestamps null: false
     end

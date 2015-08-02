@@ -1,0 +1,20 @@
+<% if defined?(@params_user) and @params_user.include?("name") %>
+	$('#show_name').text("<%= @user.name %>")
+	$('#new_name').hide()
+	$('#new_name_link').show()
+	// alert("2")
+<% elsif defined?(@params_user) %>
+	$('#show_description').text("<%= @user.user_description %>")
+// $('#show_description').text("<%= @user.user_description %>")
+	$('#new_description').hide()
+	$('#new_description_link').show()
+alert("3")
+
+
+// alert(<%= %>)
+<% else %>
+	$('#user_name').val("")
+	$('#user_name').focus()
+	alert("昵称过长")
+alert(<%= defined?(@params).to_s %>)	
+<% end %>

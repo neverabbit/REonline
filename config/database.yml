@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: REonline_production
-  username: REonline
-  password: <%= ENV['REONLINE_DATABASE_PASSWORD'] %>
+  username: root
+  password: wang1987127

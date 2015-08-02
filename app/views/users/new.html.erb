@@ -1,0 +1,22 @@
+<div class="col-md-6 col-md-offset-3">
+	<%= form_for @user, html: { :class=> "new_form"} do |f| %>
+		<% @item = @user %>
+		<%= render 'shared/error_messages' %>
+		
+		<%= f.label :email, "电子邮箱＊" %>
+		<%= f.text_field :email, class: "form-control" %>
+	
+		<%= f.label :name, "昵称" %>
+		<%= f.text_field :name, class: "form-control" %>
+	
+		<%= f.label :password, "密码＊" %>
+		<%= f.password_field :password, class: "form-control" %>
+	
+		<%= f.label :password_confirmation, "确认密码＊" %>
+		<%= f.password_field :password_confirmation, class: "form-control" %>
+	
+		<%= f.submit "注册", class: "btn btn-primary submit_button"%>
+	<% end %>
+</div>
+	
+	

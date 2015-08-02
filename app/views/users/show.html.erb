@@ -1,0 +1,53 @@
+<%= @user.name %>
+<div class="row">
+	<div class="col-md-8">
+		<div id="inform" class="jumbotron">
+			<div id="user_details" class="details">
+				<strong id="show_name"><%= !@user.name.blank? ? @user.name : @user.email %></strong>
+				
+					<!-- <div><%= hidden_field_tag :user_id %> -->
+					
+				
+				<%= link_to "编辑昵称", "#", id: "new_name_link", class: "btn" %>
+				<%= render 'form_name' %>
+				<span id="show_description"><%= @user.user_description.blank? ? "尚无简介" : @user.user_description %></span>
+				<%= link_to "编辑简介", "#", id: "new_description_link", class: "btn" %>
+				<%= render 'form_description' %> 
+			<!-- <span class="glyphicon glyphicon-heart-empty icon"><span>
+			<span class="glyphicon glyphicon-share-alt icon"><span> -->	
+			</div>
+		</div>
+		<div id="grades">
+			<p>评分</p>
+			<span class="glyphicon glyphicon-star-empty"></span>
+			<span class="glyphicon glyphicon-star-empty"></span>
+			<span class="glyphicon glyphicon-star-empty"></span>
+			<span class="glyphicon glyphicon-star-empty"></span>
+			<span class="glyphicon glyphicon-star-empty"></span>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div id="subs" class="jumbotron">
+					<p>版块</p>
+					<a href="#">前端开发</a>
+					<a href="#">后端开发</a>
+					<a href="#">移动开发</a>
+					<a href="#">数据处理</a>
+					<a href="#">图像处理</a>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div id="selected" class="jumbotron">
+					<p>精选</p>
+					<a href="#">CSS教程</a>
+					<a href="#">HTML教程</a>
+				</div>
+			</div>
+		</div>	
+		<div id="comments">
+			<p>评论</p>
+			<p>user1: Sehr Gut! Es gefaellt mir. Super! Fantastisch! Lustig! Duang!</p>
+			<br>
+			<br>
+		</div>		
+	</div>
